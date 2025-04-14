@@ -1,6 +1,9 @@
 import streamlit as st
+import os 
 
-st.title("👋 Hello There!")
+NAME = os.getenv('NAME')
+
+st.title(f"👋 Hello {NAME}!")
 st.markdown(
     """ 
     This is a playground for you to try Streamlit and have fun. 
@@ -15,3 +18,4 @@ st.markdown(
 
 if st.button("Send balloons!"):
     st.balloons()
+
